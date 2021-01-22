@@ -38,4 +38,17 @@ describe('API /documents', () => {
         done();
       });
   });
+
+
+  it('should return Bad Request', (done) => {
+    chai.request(app)
+      .get('/foo')
+      .end((err, res) => {
+        res.should.have.status(404);
+        done();
+      });
+  });
+
 });
+
+

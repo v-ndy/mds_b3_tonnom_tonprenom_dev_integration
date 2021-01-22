@@ -8,6 +8,6 @@ node index.js
 
 npm test 
 
-#Recover all colors
+# Recover all colors
 
 return all colors
