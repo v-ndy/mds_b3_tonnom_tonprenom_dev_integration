@@ -19,3 +19,7 @@ recover 404
 # Recover add color
 
 add new value 
+
+# Recover the new list color
+
+return new color list 

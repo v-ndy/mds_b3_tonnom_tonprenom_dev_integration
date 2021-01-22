@@ -62,7 +62,18 @@ describe('API /documents', () => {
         done();
       });
   });
-
+  
+  it(' should return new color list Request', (done) => {
+    chai.request(app)
+      .get('/colors')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.be.an('object');
+        res.body.results.should.be.an('array');
+        res.body.results.should.be.eql(['RED','GREEN','BLUE','NEW_COLOR_0']);
+        done();
+      });
+  });
 });
-
 
