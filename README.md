@@ -2,7 +2,7 @@
 
 # Launch API
 
-node index.js
+npm start
 
 # Launch test
 
@@ -11,3 +11,11 @@ npm test
 # Recover all colors
 
 return all colors
+
+# Return status 404
+
+recover 404
+
+# Recover add color
+
+add new value 

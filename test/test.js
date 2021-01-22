@@ -49,6 +49,20 @@ describe('API /documents', () => {
       });
   });
 
+  it('should add new colors', (done) => {
+    chai.request(app)
+      .post('/colors')
+      .send(payloadColor())
+      .end((err, res) => {
+        res.should.have.status(201);
+        res.should.be.json;
+        res.body.should.be.an('object');
+        res.body.results.should.be.an('array');
+        res.body.results.should.be.include(getCurrentCulor());
+        done();
+      });
+  });
+
 });
 
 
